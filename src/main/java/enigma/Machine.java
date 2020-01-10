@@ -7,6 +7,7 @@ public class Machine {
 	private Rotor rightRotor;
 	private Reflector reflector;
 
+        // Cette méthode a pour rôle d'initialiser la machine avec les 3 rotors correspondant et le reflecteur
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
 		leftRotor = left;
@@ -14,6 +15,7 @@ public class Machine {
 		rightRotor = right;
 	}
 
+        // Cette méthode permet de  d'initialiser les rotors et le reflector aux 4 premiers  characters de la chaine donnée en paramètre
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -21,13 +23,13 @@ public class Machine {
 		middleRotor.setPosition(Rotor.toIndex(charSettings[2]));
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
-	
+	// Cette méthode sert de configuration en appelant les deux précédentes.
 	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
 		this.initRotors(reflector, left, middle, right);
 		this.setPositions(setting);
 
 	}
-
+        // Cette méthode convertir le msg à coder dans le format voulu, en majuscule, on code le message passé en parametre et on le renvoit de type String 
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();
@@ -52,7 +54,8 @@ public class Machine {
 		return Rotor.toLetter(output);
 
 	}
-
+// Chacun de ces rotors vont s'incrémenter d'un cran en foction de la position du character dans le mot à coder et du rotor précedent.
+// A chaque fois que l'on tape une lettre le rotor tourne d'un cran et la permutation est changée.
 	void advanceRotors() {
 		boolean advanceLeft = false;
 		boolean advanceMiddle = false;

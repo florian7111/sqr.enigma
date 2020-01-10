@@ -15,6 +15,7 @@ public class Rotor {
     public void setPosition(int posn) {
         position = posn;
     }
+    // Cette fonction va supprimer les espace du message à coder
     
 	public static Rotor rotorFactory(String str, String notches){
 		char[] s = str.trim().replace(" ", "").toCharArray();
@@ -51,8 +52,10 @@ public class Rotor {
     public int convertForward(int p) {
         return ((cipher[((p+position)%26+26)%26]-position)%26+26)%26;
     }
-
+    
+// Donne la position du rotor à chaque lettre
     public int convertBackward(int e) {
+        
         return ((bcipher[((e+position)%26+26)%26]-position)%26+26)%26;
     }
     

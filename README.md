@@ -23,7 +23,8 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Rotor
 #### function
-
+	Les constructeurs de la classe Rotor de sont pas à tester
+	
 ## Tricks & tips
 
 - Never test auto generate code

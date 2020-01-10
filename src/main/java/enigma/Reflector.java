@@ -6,7 +6,8 @@ package enigma;
 public class Reflector extends Rotor {
 	
 	int[] reflection;
-	
+	// Cette fonction enlève les espaces du code 1. La chaine de caractère sera ensuite transmise au reflecteur et aux 3 rotors.
+        
 	public static Reflector reflectorFactory(String str){
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
