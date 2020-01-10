@@ -17,15 +17,15 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### Les fonctions initRotors(), SetPositions(), configure() qui sont des fonctions d'initialisations ne sont pas à tester
-	On testera les méthodes convert(), convertChar() et advanceRotors()
+	On testera les méthodes convert(), convertChar() et advanceRotors(). A noté que la fonction convert() a déjà été testée dans la classe MachineTest
 
 ### Classe Reflector
-#### On testera la fonction reflectorFactory()
+#### On testera la fonction reflectorFactory() et convertForward()
 
 ### Classe Rotor
 #### function
 	Les constructeurs de la classe Rotor de sont pas à tester
-	On testera la fonction rotorFactory() et atNotch()
+	On testera la fonction rotorFactory(), convertForward(), convertBackward()
 	
 ## Tricks & tips
 
