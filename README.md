@@ -16,14 +16,16 @@ Code for the German Enigma machine used in WW2.
 Hereafter, for each classes give function to be tested 
 
 ### Classe Machine
-#### functions
+#### Les fonctions initRotors(), SetPositions(), configure() qui sont des fonctions d'initialisations ne sont pas à tester
+	On testera les méthodes convert(), convertChar() et advanceRotors()
 
 ### Classe Reflector
-#### function
+#### On testera la fonction reflectorFactory()
 
 ### Classe Rotor
 #### function
 	Les constructeurs de la classe Rotor de sont pas à tester
+	On testera la fonction rotorFactory() et atNotch()
 	
 ## Tricks & tips
 
